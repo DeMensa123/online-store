@@ -165,10 +165,12 @@ const Cart = ({ total, total_ex_vat, onSendOrder }) => {
         </table>
 
         <div className="w-full max-w-2xl flex flex-row items-center justify-between">
-          <div className="flex flex-row items-center text-indigo-500 ">
-            <FaArrowLeft className="mr-2 font-medium"></FaArrowLeft>
-            <Link to="/products">Back</Link>
-          </div>
+          <Link to="/products">
+            <div className="flex flex-row items-center text-indigo-500 ">
+              <FaArrowLeft className="mr-2 font-medium"></FaArrowLeft>
+              Back
+            </div>
+          </Link>
           <button
             className="bg-indigo-500 font-medium my-3 py-2 px-5 text-white rounded-md"
             onClick={onSendOrder}
