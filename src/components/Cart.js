@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import React, { useState, useEffect } from "react";
+import React, { Component, PropTypes } from "react";
 
 const Cart = ({ total, total_ex_vat, onSendOrder }) => {
   const cart = useSelector((state) => state);

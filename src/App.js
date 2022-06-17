@@ -1,13 +1,12 @@
 import Products from "./components/Products";
 import Cart from "./components/Cart";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Order from "./components/Order";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
-  // const [data, setData] = useState([]);
   const data = require("./data/products.json"); // import products
   const cart = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -31,26 +30,6 @@ function App() {
         0
       )
     : 0;
-
-  // // Loading data from server
-  // const getProducts = () => {
-  //   fetch("http://localhost:5000/products", {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   })
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (myJson) {
-  //       console.log(myJson);
-  //       setData(myJson);
-  //     });
-  // };
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
 
   const [order, setOrder] = useState([]);
   const [orderTotal, setOrderTotal] = useState([]);

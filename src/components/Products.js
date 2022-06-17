@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Product from "./Product";
+import React from "react";
 
 const Products = ({ products }) => {
   return (
